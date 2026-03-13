@@ -14,10 +14,10 @@ def request_option():
     return opcion
 # () La función validadora. Solo acepta Y o N 
 # — cualquier otra cosa activa la recursión y vuelve a preguntar. 
-# Retorna la opción válida al while
+# Retorna la opción válida al while.
 
 while request_option() == 'Y': 
     product_records() 
 show_summary() 
 print("The program has ended. Thank you for your registrations.")
-#Una vez fuera del bucle, estas dos líneas se ejecutan una sola vez
+#Una vez fuera del bucle, estas dos líneas se ejecutan una sola vez.

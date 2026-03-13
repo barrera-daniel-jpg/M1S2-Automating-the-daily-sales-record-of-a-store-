@@ -12,7 +12,7 @@ def product_records():
         print("\nInvalid data. Please enter numbers only.")
         print("_"*40)
         return product_records()
-    total = price*quantity #Calcula el total de la operacion
+    total = price*quantity #Calcula el total de la operacion.
     
 
     

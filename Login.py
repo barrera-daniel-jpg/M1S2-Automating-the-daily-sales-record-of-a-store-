@@ -1,33 +1,35 @@
-from History import add_to_history #Trae add_to_history de History.py y activa la lista global
+from History import add_to_history  # Imports add_to_history from History.py and uses the global list
+
 
 def product_records():
     
-    #Usa .capitalize() para estandarizar la entrada del usuario
-    product = input(">> Please enter the item to register: ").capitalize() 
+    # Uses .capitalize() to standardize user input
+    product = input(">> Please enter the item to register: ").capitalize()
+    
     try:
         price = float(input(">> Please enter the product price: "))
         quantity = int(input(">> Please enter the quantity of products sold: "))
-    except ValueError: #Captura ValueError y reinicia el proceso si hay texto inválido
-        print("_"*40)
+    except ValueError:  # Catches ValueError and restarts the process if invalid input is entered
+        print("_" * 40)
         print("\nInvalid data. Please enter numbers only.")
-        print("_"*40)
+        print("_" * 40)
         return product_records()
-    total = price*quantity #Calcula el total de la operacion.
     
+    total = price * quantity  # Calculates the total of the operation
 
-    
-   #Arma diccionario con 4 datos 
-    producto = {
+    # Builds a dictionary with 4 data points
+    product_data = {
         "product": product,
         "price": price,
         "quantity": quantity,
         "total": total
     }
-    add_to_history(producto) # Llama a add_to_history(producto) para guardar el paquete en la lista global, luego imprime una confirmación
-# al usuario con el nombre del producto y el total.
+
+    # Calls add_to_history(product_data) to store it in the global list,
+    # then prints a confirmation to the user
+    add_to_history(product_data)
     
-    print("_"*40) # Mejora la visualizacion y la experiencia de usuario
-    print(f"\n>> {producto['product']} It was correctly registered")
-    print(f">> The total amount raised was: ${producto['total']}")
-    print("_"*40) # Mejora la visualizacion y la experiencia de usuario
-    
+    print("_" * 40)  # Improves visualization and user experience
+    print(f"\n>> {product_data['product']} was successfully registered")
+    print(f">> The total amount earned was: ${product_data['total']}")
+    print("_" * 40)  # Improves visualization and user experience

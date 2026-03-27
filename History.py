@@ -1,17 +1,18 @@
-history = [] #Lista global que actúa como memoria del programa
+history = []  # Global list that acts as the program's memory
 
 
-def add_to_history(producto): #Recibe diccionarios de Login.py y los almacena con append()
-    history.append(producto)
+def add_to_history(product):  # Receives dictionaries from Login.py and stores them using append()
+    history.append(product)
 
-def show_summary(): #Recorre la lista, imprime productos y acumula totales
+
+def show_summary():  # Iterates through the list, prints products, and accumulates totals
     
-    print("\n=========== Sales summary ===========") # Mejora la visualizacion y la experiencia de usuario
-    total_memories = 0
+    print("\n=========== Sales Summary ===========")  # Improves visualization and user experience
+    total_memory = 0
     
-    for producto in history:
-        print(f">> {producto['product']}: {producto['quantity']} quantity x ${producto['price']} = ${producto['total']}")
-        total_memories += producto['total']
+    for product in history:
+        print(f">> {product['product']}: {product['quantity']} quantity x ${product['price']} = ${product['total']}")
+        total_memory += product['total']
     
-    print(f">> Total raised: ${total_memories}")
-    print("="*40) # Mejora la visualizacion y la experiencia de usuario.
+    print(f">> Total earned: ${total_memory}")
+    print("=" * 40)  # Improves visualization and user experience
